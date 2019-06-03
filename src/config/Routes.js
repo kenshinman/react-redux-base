@@ -1,17 +1,17 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Loadable from "react-loadable";
-import LoadingComponent from "../components/LoadingComponent";
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { PageLoader } from "../components/Loaders";
 
 // create Loadable pages
-const Home = Loadable({
-  loader: () => import("../pages/home/Home"),
-  loading: LoadingComponent
-});
+const Home = lazy(() => import("../pages/home/Home"));
 
 const Routes = () => (
   <Router>
-    <Route exact path="/" component={Home} />
+    <Suspense fallback={<PageLoader />}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </Suspense>
   </Router>
 );
 
