@@ -1,7 +1,7 @@
 import { IS_LOGGING_IN, DONE_LOGGING_IN, SET_USER } from "../types";
 
 const initialState = {
-  user: null,
+  user: {},
   isLoggingIn: false,
   isAuthenticated: false
 };
