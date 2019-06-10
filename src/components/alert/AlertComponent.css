@@ -1,0 +1,62 @@
+@import url("./animate.min.css");
+
+.alert-container,
+.alert-item {
+  list-style: none;
+  display: block;
+}
+
+.alert-container {
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.alert-item {
+  box-shadow: 2px 2px 3px #ececec;
+  padding: 8px 10px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  width: auto;
+  max-width: 280px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.alert-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 2px 2px 3px #ececec;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  width: 300px;
+  min-height: 40px;
+}
+
+.alert-item h3 {
+  line-height: 0;
+}
+
+.alert-item p {
+  font-size: 14px;
+}
+
+.alert-action .close {
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.alert-content,
+.close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

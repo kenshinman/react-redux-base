@@ -8,7 +8,6 @@ import Routes from "./config/Routes";
 
 if (localStorage.jwt) {
   //set auth token header auth;
-  // setAuthToken(localStorage.jwt);
   axios.defaults.headers.common[
     "Authorization"
   ] = store.getState().auth.user.token;
@@ -17,7 +16,7 @@ if (localStorage.jwt) {
   //decode token and get user
   const decoded = jwt_decode(localStorage.jwt);
   //set current user
-  //sets persistent sessio
+  //sets persistent session
   if (localStorage.user)
     store.dispatch(setCurrentUser(JSON.parse(localStorage.user)));
 
