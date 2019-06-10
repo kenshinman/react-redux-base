@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classnames from "classnames";
 import "./AlertComponent.css";
 import uuid from "uuid/v4";
@@ -18,8 +18,10 @@ import IosInformationCircleOutline from "react-ionicons/lib/IosInformationCircle
  */
 
 const AlertItem = ({ alert, removeAlert }) => {
+  const [currentClass, setCurrentClass] = useState("slideInUp");
   const doRemove = id => {
-    removeAlert(id);
+    setCurrentClass("fadeOutDown");
+    setTimeout(() => removeAlert(id), 500);
   };
 
   const alertType = type => {
@@ -39,8 +41,9 @@ const AlertItem = ({ alert, removeAlert }) => {
 
   return (
     <li
-      className={classnames("alert-item animated", {
-        slideInUp: true
+      className={classnames("alert-item animated faster", {
+        slideInUp: currentClass === "slideInUp",
+        fadeOutDown: currentClass === "fadeOutDown"
       })}>
       <div className="icon">{alertType(alert.type)}</div>
       <div className="alert-content">
@@ -92,5 +95,7 @@ export class AlertWrapper extends React.Component {
 export const doAlert = (message = "", type = "info") => {
   if (window.alertRef) {
     window.alertRef.doAlert(message, type);
+  } else {
+    console.log("no container found");
   }
 };
