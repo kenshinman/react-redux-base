@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import "./AlertComponent.css";
 import uuid from "uuid/v4";
@@ -17,8 +17,18 @@ import IosInformationCircleOutline from "react-ionicons/lib/IosInformationCircle
  *
  */
 
+const currentId = uuid();
+
 const AlertItem = ({ alert, removeAlert }) => {
   const [currentClass, setCurrentClass] = useState("slideInUp");
+
+  useEffect(() => {
+    setTimeout(async () => {
+      await setCurrentClass("fadeOutDown");
+      doRemove(currentId);
+    }, 3000);
+  });
+
   const doRemove = id => {
     setCurrentClass("fadeOutDown");
     setTimeout(() => removeAlert(id), 500);
@@ -66,7 +76,7 @@ export class AlertWrapper extends React.Component {
 
   doAlert = (message, type) => {
     // let newAlerts = [{ message, type, id: uuid() }];
-    this.setState({ alerts: [{ message, type, id: uuid() }] });
+    this.setState({ alerts: [{ message, type, id: currentId }] });
   };
 
   removeAlert = id => {
