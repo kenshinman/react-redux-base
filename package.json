@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "classnames": "^2.2.6",
     "jwt-decode": "^2.2.0",
     "nprogress": "^0.2.0",
     "react": "^16.8.6",
@@ -24,7 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "analyze": "source-map-explorer 'build/static/js/*.js'"
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "lint": "./node_modules/.bin/eslint ./src",
+    "pretty": "prettier --write '**/*.{ts,js,css,html}'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "redux-logger": "^3.0.6"
   }
 }
