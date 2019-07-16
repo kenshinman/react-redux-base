@@ -36,16 +36,16 @@ const AlertItem = ({ alert, removeAlert }) => {
 
   const alertType = type => {
     switch (type) {
-      case "success":
-        return <MdCheckmarkCircleOutline fontSize="30px" color="#27ae60" />;
-      case "error":
-        return <IosCloseCircleOutline fontSize="30px" color="#e74c3c" />;
-      case "warning":
-        return <IosWarningOutline fontSize="26px" color="orange" />;
-      case "info":
-        return <IosInformationCircleOutline fontSize="30px" color="#69f" />;
-      default:
-        return <IosInformationCircleOutline fontSize="30px" color="#69f" />;
+    case "success":
+      return <MdCheckmarkCircleOutline fontSize="30px" color="#27ae60" />;
+    case "error":
+      return <IosCloseCircleOutline fontSize="30px" color="#e74c3c" />;
+    case "warning":
+      return <IosWarningOutline fontSize="26px" color="orange" />;
+    case "info":
+      return <IosInformationCircleOutline fontSize="30px" color="#69f" />;
+    default:
+      return <IosInformationCircleOutline fontSize="30px" color="#69f" />;
     }
   };
 

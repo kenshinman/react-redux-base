@@ -21,13 +21,7 @@ class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div
-          style={{
-            backgroundColor: "grey",
-            display: "inline-block",
-            padding: 10,
-          }}
-        >
+        <div className='container'>
           <h3>Something went wrong. Can't render this part.</h3>
         </div>
       );

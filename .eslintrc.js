@@ -3,7 +3,16 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: "eslint:recommended",
+  settings: {
+    react: {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   parser: "babel-eslint",
   globals: {
     Atomics: "readonly",
@@ -23,5 +32,6 @@ module.exports = {
     quotes: ["error", "double"],
     semi: ["error", "always"],
     "no-console": 1,
+    "react/prop-types": [0]
   },
 };

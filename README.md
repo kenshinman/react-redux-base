@@ -36,3 +36,8 @@ Forked from [react-redux-base](https://github.com/kenshinman/react-redux-base)
         yarn add -D @babel/plugin-proposal-class-properties
 
 1. Mock out css styles in jest
+
+
+## To Do
+
+1. Add `prop-types` validation library and enable in `eslint`.
