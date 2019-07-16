@@ -24,7 +24,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "testWatch": "jest --watch",
+    "test:watch": "jest --watch",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "lint": "./node_modules/.bin/eslint ./src",

@@ -28,7 +28,7 @@ if (localStorage.jwt) {
   }
 }
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <Routes />
