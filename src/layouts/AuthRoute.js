@@ -12,11 +12,11 @@ const AuthRoute = ({ component: Component, auth, ...rest}) => {
       }
       else {
         return (
-          <section className="login-layout-section">
+          <main className='container' id="auth-route-layout">
             <ErrorBoundary>
               <Component {...props} />
             </ErrorBoundary>
-          </section>
+          </main>
         );
       }
     }}

@@ -2,8 +2,22 @@ import React from "react";
 
 const Header = props => {
   return (
-    <header className="site-header bg-white pos-f fixed-to-top light-shadow ">
-      <h2>Header component</h2>
+    <header>
+      <div className="navigation-div">
+        <div id="branding">
+          <a id="brand-name" href="/">
+            <h1>Branding</h1>
+          </a>
+        </div>
+        
+        <nav className="menu">
+          <ul className="navigation-items">
+            <li><a className="home" href="/">Home</a></li>
+            <li><a className="about" href="/about">About</a></li>
+            <li><a href="/login"><button id="sign_in" className="button">Login</button></a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

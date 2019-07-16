@@ -10,7 +10,7 @@ const PublicRoute = ({ component: Component, ...rest }) => {
         <ErrorBoundary>
           <Header />
           {/* <SideNav /> */}
-          <main id="main">
+          <main className='container' id="public-route-layout">
             <Component {...props} />
           </main>
         </ErrorBoundary>

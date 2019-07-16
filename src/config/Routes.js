@@ -4,7 +4,7 @@ import { PageLoader } from "../components/Loaders";
 import PrivateRoute from "../layouts/PrivateRoute";
 import AuthRoute from "../layouts/AuthRoute";
 import PublicRoute from "../layouts/PublicRoute";
-import Error404 from '../components/Error404';
+import Error404 from "../components/Error404";
 import { AlertWrapper } from "../components/alert/AlertComponent";
 
 // create Loadable pages
@@ -20,13 +20,13 @@ const Routes = () => (
         {/* can't access them when you are logged in */}
         <AuthRoute exact path="/login" component={Login} />
         <AuthRoute exact path="/" component={Login} />
-
+  
         {/* can only access them when you are logged in */}
         <PrivateRoute exact path="/home" component={Home} />
-
+  
         {/* public route: accessible to both !!authenticated users */}
         <PublicRoute exact path="/about" component={About} />
-
+  
         {/* catch all invalid urls */}
         <Route component={Error404} />
       </Switch>

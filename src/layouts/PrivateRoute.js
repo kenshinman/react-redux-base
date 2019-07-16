@@ -12,7 +12,7 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
           <ErrorBoundary>
             <Header />
             {/* <SideNav /> */}
-            <main id="main">
+            <main className='container' id="private-route-layout">
               <Component {...props} />
             </main>
           </ErrorBoundary>
