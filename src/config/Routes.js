@@ -1,9 +1,10 @@
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PageLoader } from "../components/Loaders";
 import PrivateRoute from "../layouts/PrivateRoute";
 import AuthRoute from "../layouts/AuthRoute";
 import PublicRoute from "../layouts/PublicRoute";
+import Error404 from '../components/Error404';
 import { AlertWrapper } from "../components/alert/AlertComponent";
 
 // create Loadable pages
@@ -25,6 +26,9 @@ const Routes = () => (
 
         {/* public route: accessible to both !!authenticated users */}
         <PublicRoute exact path="/about" component={About} />
+
+        {/* catch all invalid urls */}
+        <Route component={Error404} />
       </Switch>
     </Suspense>
   </Router>
