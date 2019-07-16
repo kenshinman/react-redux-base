@@ -37,6 +37,21 @@ Forked from [react-redux-base](https://github.com/kenshinman/react-redux-base)
 
 1. Mock out css styles in jest
 
+## Application layout structure
+
+The app is laid out with a flexbox in such a way that no empty space will remain at the bottom. The app will completely occuppy the height of the viewport.
+
+```html
+<section id='root'>
+        <header>
+                <nav></nav>
+        </header>
+
+        <main class='container'>
+                <section></section>
+        </main>
+</section>
+```
 
 ## To Do
 
