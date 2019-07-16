@@ -32,7 +32,7 @@ class AuthRoute extends React.PureComponent {
 }
 
 const mapStateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
 });
 
 export default connect(

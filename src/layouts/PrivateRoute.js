@@ -43,7 +43,7 @@ class PrivateRoute extends Component {
 }
 
 const mapSateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
 });
 
 export default connect(

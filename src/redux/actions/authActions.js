@@ -2,7 +2,7 @@ import {
   IS_LOGGING_IN,
   // DONE_LOGGING_IN,
   SET_USER,
-  LOGOUT_USER
+  LOGOUT_USER,
 } from "../types";
 
 export const loginUser = (email, password) => dispatch => {

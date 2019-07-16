@@ -13,8 +13,9 @@ export const PageLoader = () => (
       position: "absolute",
       display: "flex",
       justifyContent: "center",
-      alignContent: "center"
-    }}>
+      alignContent: "center",
+    }}
+  >
     <Loader type="Oval" color="black" width="56" height="56" />
   </div>
 );

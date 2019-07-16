@@ -53,8 +53,9 @@ const AlertItem = ({ alert, removeAlert }) => {
     <li
       className={classnames("alert-item animated faster", {
         slideInUp: currentClass === "slideInUp",
-        fadeOutDown: currentClass === "fadeOutDown"
-      })}>
+        fadeOutDown: currentClass === "fadeOutDown",
+      })}
+    >
       <div className="icon">{alertType(alert.type)}</div>
       <div className="alert-content">
         <span style={{ color: "#ccc" }}>{alert.message}</span>
@@ -70,7 +71,7 @@ export class AlertWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      alerts: []
+      alerts: [],
     };
   }
 

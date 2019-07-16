@@ -4,12 +4,12 @@ class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hasError: false
+      hasError: false,
     };
   }
   static getDerivedStateFromError(error) {
     return {
-      hasError: true
+      hasError: true,
     };
   }
 
@@ -25,8 +25,9 @@ class ErrorBoundary extends Component {
           style={{
             backgroundColor: "grey",
             display: "inline-block",
-            padding: 10
-          }}>
+            padding: 10,
+          }}
+        >
           <h3>Something went wrong. Can't render this part.</h3>
         </div>
       );

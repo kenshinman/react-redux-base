@@ -28,7 +28,7 @@
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "lint": "./node_modules/.bin/eslint ./src",
-    "pretty": "prettier --write '**/*.{ts,js,css,html}'"
+    "pretty": "prettier --write '**/*.{ts,js,css,html,json,md}'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -66,7 +66,9 @@
     "setupFilesAfterEnv": [
       "<rootDir>__tests__/setup/setupEnzyme.js"
     ],
-    "testPathIgnorePatterns": ["<rootDir>/__tests__/setup/"],
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/setup/"
+    ],
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },
