@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{151:function(e,n,t){"use strict";t.r(n);var c=t(0),a=t.n(c),r=t(53);n.default=function(){return a.a.createElement(a.a.Fragment,null,a.a.createElement("h2",null,"Login here"),a.a.createElement("button",{onClick:function(){return Object(r.b)("This is a message","success")}},"click me"))}}}]);
+//# sourceMappingURL=4.a97a438f.chunk.js.map
