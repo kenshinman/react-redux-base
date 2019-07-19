@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{151:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a),c=t(53);n.default=function(){return r.a.createElement("div",null,r.a.createElement("h2",null,"Login here"),r.a.createElement("button",{onClick:function(){return Object(c.b)("This is a message","success")}},"click me"),r.a.createElement("p",null,r.a.createElement("a",{href:"/about"},"About")),r.a.createElement("p",null,r.a.createElement("a",{href:"/some-unknown-url"},"Error 404 page")))}}}]);
+//# sourceMappingURL=4.bf66b695.chunk.js.map
