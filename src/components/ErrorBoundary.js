@@ -27,7 +27,10 @@ class ErrorBoundary extends Component {
 }
 
 ErrorBoundary.propTypes = {
-  children: propTypes.object.isRequired,
+  children: propTypes.oneOfType([
+    propTypes.object,
+    propTypes.array
+  ]).isRequired,
 };
 
 export default ErrorBoundary;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { doAlert } from '../../components/alert/AlertComponent';
 
 
@@ -10,8 +11,8 @@ const Login = () => {
         click me
       </button>
 
-      <p><a href='/about'>About</a></p>
-      <p><a href='/some-unknown-url'>Error 404 page</a></p>
+      <p><Link to='/about'>About</Link></p>
+      <p><Link to='/some-unknown-url'>Error 404 page</Link></p>
     </div>
   );
 };

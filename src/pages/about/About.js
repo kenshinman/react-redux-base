@@ -9,14 +9,14 @@ const About = () => {
       <p>
         Also checkout <a href='https://github.com/chidimo/React-Redux-Starter'>React Redux Starter</a>.
         It also incorporates the following CI/CD infrastructures:
-        <ol>
-          <li><code>React testing library</code></li>
-          <li><code>travis-ci</code></li>
-          <li><code>AppVeyor</code></li>
-          <li><code>coveralls</code></li>
-          <li><code>codeclimate</code></li>
-        </ol>
       </p>
+      <ol>
+        <li><code>React testing library</code></li>
+        <li><code>travis-ci</code></li>
+        <li><code>AppVeyor</code></li>
+        <li><code>coveralls</code></li>
+        <li><code>codeclimate</code></li>
+      </ol>
     </section>
   );
 };
