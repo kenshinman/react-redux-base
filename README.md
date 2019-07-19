@@ -19,8 +19,8 @@ Preview at <http://chidimo.github.io/react-redux-base>
 
         yarn add prettier -D
 
-1. Install [prettier-vscode](https://github.com/prettier/prettier-vscode) from the `vs-code` extension store.
-1. Create `pretty` script command.
+1.  Install [prettier-vscode](https://github.com/prettier/prettier-vscode) from the `vs-code` extension store.
+1.  Create `pretty` script command.
 
 ### Linting
 
@@ -29,7 +29,7 @@ Preview at <http://chidimo.github.io/react-redux-base>
 
 ### Testing
 
-1. Add and configure `enzyme` test library. [Guide](https://alligator.io/react/testing-react-redux-with-jest-enzyme/)
+1.  Add and configure `enzyme` test library. [Guide](https://alligator.io/react/testing-react-redux-with-jest-enzyme/)
 
         yarn add -D enzyme enzyme-adapter-react-16 enzyme-to-json
         yarn add -D redux-mock-store
@@ -37,21 +37,21 @@ Preview at <http://chidimo.github.io/react-redux-base>
         yarn add -D sinon chai
         yarn add -D @babel/plugin-proposal-class-properties
 
-1. Mock out css styles in jest
+1.  Mock out css styles in jest
 
 ## Application layout structure
 
 The app is laid out with a flexbox in such a way that no empty space will remain at the bottom. The app will completely occuppy the height of the viewport.
 
 ```html
-<section id='root'>
-        <header>
-                <nav></nav>
-        </header>
+<section id="root">
+  <header>
+    <nav></nav>
+  </header>
 
-        <main class='container'>
-                <section></section>
-        </main>
+  <main class="container">
+    <section></section>
+  </main>
 </section>
 ```
 

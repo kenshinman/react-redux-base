@@ -1,11 +1,11 @@
-* { 
+* {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
-  color: #506F82;
+  color: #506f82;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -29,8 +29,7 @@ code {
 
 button {
   height: 35px;
-  color: #333A56;
-  border: 0;
+  color: #333a56;
   cursor: pointer;
   font-size: 18px;
   border-radius: 3px;
@@ -52,11 +51,11 @@ header #branding h1 {
 }
 
 header {
-  background-color: #1E3B9E;
+  background-color: #1e3b9e;
 }
 
 header a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-size: 16px;
 }

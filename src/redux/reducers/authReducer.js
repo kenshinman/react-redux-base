@@ -1,4 +1,4 @@
-import { IS_LOGGING_IN, DONE_LOGGING_IN, SET_USER } from "../types";
+import { IS_LOGGING_IN, DONE_LOGGING_IN, SET_USER } from '../types';
 
 const initialState = {
   user: {},

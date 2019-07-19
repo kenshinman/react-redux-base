@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Header = props => {
+const Header = () => {
   return (
     <header>
       <div className="navigation-div">
@@ -9,12 +9,26 @@ const Header = props => {
             <h1>Branding</h1>
           </a>
         </div>
-        
+
         <nav className="menu">
           <ul className="navigation-items">
-            <li><a className="home" href="/">Home</a></li>
-            <li><a className="about" href="/about">About</a></li>
-            <li><a href="/login"><button id="sign_in" className="button">Login</button></a></li>
+            <li>
+              <a className="home" href="/">
+                Home
+              </a>
+            </li>
+            <li>
+              <a className="about" href="/about">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/login">
+                <button id="sign_in" className="button">
+                  Login
+                </button>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

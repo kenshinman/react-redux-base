@@ -5,14 +5,11 @@ module.exports = {
   },
   settings: {
     react: {
-      "pragma": "React",
-      "version": "detect"
-    }
+      pragma: "React",
+      version: "detect",
+    },
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   parser: "babel-eslint",
   globals: {
     Atomics: "readonly",
@@ -29,9 +26,8 @@ module.exports = {
   rules: {
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
-    quotes: ["error", "double"],
+    quotes: ["error", "single"],
     semi: ["error", "always"],
     "no-console": 1,
-    "react/prop-types": [0]
   },
 };

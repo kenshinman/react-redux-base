@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import { createLogger } from "redux-logger";
-import rootReducer from "./reducers";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { createLogger } from 'redux-logger';
+import rootReducer from './reducers';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const logger = createLogger();
 const middlewares = [logger, thunk];
@@ -10,7 +10,8 @@ const middlewares = [logger, thunk];
 const initialState = {};
 
 const devTools =
-  process.env.NODE_ENV === "production"
+  // eslint-disable-next-line no-undef
+  process.env.NODE_ENV === 'production'
     ? applyMiddleware(...middlewares)
     : composeWithDevTools(applyMiddleware(...middlewares));
 
