@@ -19,9 +19,7 @@ const Header = () => {
             </li>
             <li>
               <a href="/login">
-                <button id="sign_in" className="button">
-                  Login
-                </button>
+                <Link to="/login">Login</Link>
               </a>
             </li>
           </ul>
