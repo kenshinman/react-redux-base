@@ -25,14 +25,14 @@ const Routes = () => (
       <AlertWrapper ref={alertRef => (window.alertRef = alertRef)} />
       <Switch>
         {/* can't access them when you are logged in */}
-        <AuthRoute exact path="/login" component={Login} />
         <AuthRoute exact path={ path } component={Login} />
+        <AuthRoute exact path={`${path}login`} component={Login} />
 
         {/* can only access them when you are logged in */}
-        <PrivateRoute exact path="/home" component={Home} />
+        <PrivateRoute exact path={`${path}home`} component={Home} />
 
         {/* public route: accessible to both !!authenticated users */}
-        <PublicRoute exact path="/about" component={About} />
+        <PublicRoute exact path={`${path}about`} component={About} />
 
         {/* catch all invalid urls */}
         <Route component={Error404} />
