@@ -1,6 +1,8 @@
 import React from 'react';
 import { doAlert } from '../../components/alert/AlertComponent';
 
+import rootURL from '../../constants';
+
 const Login = () => {
   return (
     <div>
@@ -9,8 +11,8 @@ const Login = () => {
         click me
       </button>
 
-      <p><a href='/about'>About</a></p>
-      <p><a href='/some-unknown-url'>Error 404 page</a></p>
+      <p><a href={`${rootURL}/about`}>About</a></p>
+      <p><a href={`${rootURL}/some-unknown-url`}>Error 404 page</a></p>
     </div>
   );
 };

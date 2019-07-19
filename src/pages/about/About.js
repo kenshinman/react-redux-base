@@ -1,5 +1,7 @@
 import React from 'react';
 
+import rootURL from '../../constants';
+
 const About = () => {
   return (
     <section id="about">

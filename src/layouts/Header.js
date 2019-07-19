@@ -1,11 +1,13 @@
 import React from 'react';
 
+import rootURL from '../constants';
+
 const Header = () => {
   return (
     <header>
       <div className="navigation-div">
         <div id="branding">
-          <a id="brand-name" href="/">
+          <a id="brand-name" href={ rootURL }>
             <h1>Branding</h1>
           </a>
         </div>
