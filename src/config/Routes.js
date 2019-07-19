@@ -7,6 +7,13 @@ import PublicRoute from '../layouts/PublicRoute';
 import Error404 from '../components/Error404';
 import { AlertWrapper } from '../components/alert/AlertComponent';
 
+// eslint-disable-next-line no-undef
+const env = process.env.NODE_ENV;
+const path = 
+  env === 'development'
+    ? '/'
+    : '/react-redux-base/';
+
 // create Loadable pages
 const Home = lazy(() => import('../pages/home/Home'));
 const Login = lazy(() => import('../pages/auth/Login'));
@@ -19,7 +26,7 @@ const Routes = () => (
       <Switch>
         {/* can't access them when you are logged in */}
         <AuthRoute exact path="/login" component={Login} />
-        <AuthRoute exact path="/" component={Login} />
+        <AuthRoute exact path={ path } component={Login} />
 
         {/* can only access them when you are logged in */}
         <PrivateRoute exact path="/home" component={Home} />
