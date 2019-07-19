@@ -1,12 +1,10 @@
 import React from 'react';
 
-import rootURL from '../../constants';
-
 const About = () => {
   return (
     <section id="about">
       <h2>About</h2>
-      <p>Checkout <code>react this repo on  <a href='https://github.com/chidimo/react-redux-base'>Github</a></code></p>
+      <p>Checkout <code>react this repo on  <a href='https://github.com/kenshinman/react-redux-base'>Github</a></code></p>
 
       <p>
         Also checkout <a href='https://github.com/chidimo/React-Redux-Starter'>React Redux Starter</a>.

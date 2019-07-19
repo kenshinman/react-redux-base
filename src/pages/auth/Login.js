@@ -11,8 +11,8 @@ const Login = () => {
         click me
       </button>
 
-      <p><a href={`${rootURL}/about`}>About</a></p>
-      <p><a href={`${rootURL}/some-unknown-url`}>Error 404 page</a></p>
+      <p><a href={`${rootURL}about`}>About</a></p>
+      <p><a href={`${rootURL}some-unknown-url`}>Error 404 page</a></p>
     </div>
   );
 };

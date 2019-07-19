@@ -21,13 +21,13 @@ const Routes = () => (
       <Switch>
         {/* can't access them when you are logged in */}
         <AuthRoute exact path={ rootURL } component={Login} />
-        <AuthRoute exact path={`${rootURL}/login`} component={Login} />
+        <AuthRoute exact path={`${rootURL}login`} component={Login} />
 
         {/* can only access them when you are logged in */}
-        <PrivateRoute exact path={`${rootURL}/home`} component={Home} />
+        <PrivateRoute exact path={`${rootURL}home`} component={Home} />
 
         {/* public route: accessible to both !!authenticated users */}
-        <PublicRoute exact path={`${rootURL}/about`} component={About} />
+        <PublicRoute exact path={`${rootURL}about`} component={About} />
 
         {/* catch all invalid urls */}
         <Route component={Error404} />
