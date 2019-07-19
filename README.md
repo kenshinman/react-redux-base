@@ -7,6 +7,7 @@ Preview at <http://chidimo.github.io/react-redux-base>
 ## Live preview
 
 A live preview of this template is available at <http://chidimo.github.io/react-redux-base>
+
 ## Using scripts
 
 1. To run tests, use command `yarn test`. Coverage report is automatically generated and placed in the `coverage/` folder. To view the report, open `/coverage/lcov-report/index.html`. You can have `jest` watch your files by running `yarn test:watch`.
