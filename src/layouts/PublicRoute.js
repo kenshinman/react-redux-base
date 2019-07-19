@@ -24,7 +24,7 @@ const PublicRoute = ({ component: Component, ...rest }) => {
 };
 
 PublicRoute.propTypes = {
-  component: propTypes.func.isRequired,
+  component: propTypes.object.isRequired,
 };
 
 export default PublicRoute;
