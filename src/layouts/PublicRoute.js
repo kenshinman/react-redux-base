@@ -1,41 +1,30 @@
-import React, { Component } from "react";
-import { Route } from "react-router-dom";
-import { connect } from "react-redux";
-import ErrorBoundary from "../components/ErrorBoundary";
-import Header from "./Header";
+import React from 'react';
+import { Route } from 'react-router-dom';
+import propTypes from 'prop-types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import Header from './Header';
 
-class PublicRoute extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const PublicRoute = ({ component: Component, ...rest }) => {
+  return (
+    <Route
+      {...rest}
+      render={props => {
+        return (
+          <ErrorBoundary>
+            <Header />
+            {/* <SideNav /> */}
+            <main className="container" id="public-route-layout">
+              <Component {...props} />
+            </main>
+          </ErrorBoundary>
+        );
+      }}
+    />
+  );
+};
 
-  render() {
-    const { component: Component, auth, ...rest } = this.props;
-    return (
-      <Route
-        {...rest}
-        render={props => {
-          return (
-            <ErrorBoundary>
-              <Header />
-              {/* <SideNav /> */}
-              <main id="main">
-                <Component {...props} />
-              </main>
-            </ErrorBoundary>
-          );
-        }}
-      />
-    );
-  }
-}
+PublicRoute.propTypes = {
+  component: propTypes.object.isRequired,
+};
 
-const mapSateToProps = state => ({
-  auth: state.auth
-});
-
-export default connect(
-  mapSateToProps,
-  {}
-)(PublicRoute);
+export default PublicRoute;

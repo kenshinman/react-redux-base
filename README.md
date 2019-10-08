@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-redux-base (softcom.ng)
 
-## Available Scripts
+Forked from [react-redux-base](https://github.com/kenshinman/react-redux-base)
 
-In the project directory, you can run:
+Preview at <http://chidimo.github.io/react-redux-base>
 
-### `npm start`
+## Live preview
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A live preview of this template is available at <http://chidimo.github.io/react-redux-base>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Using scripts
 
-### `npm test`
+1. To run tests, use command `yarn test`. Coverage report is automatically generated and placed in the `coverage/` folder. To view the report, open `/coverage/lcov-report/index.html`. You can have `jest` watch your files by running `yarn test:watch`.
+1. To lint `JavaScript` files, run `yarn lint`. Optionally you can run `yarn lint --fix` to apply automatic fixes.
+1. To prettify files, run `yarn pretty`. By default, the command prettifies `.ts`, `.js`, `.css`, `.html`, `.json`, and `.md` files. You may extend this list by adding more file extensions to the `pretty` section of `scripts` in `package.json`.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Guides
 
-### `npm run build`
+### Prettification
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  Add `.prettierrc` file to root of project. See available [configurations](https://prettier.io/docs/en/configuration.html) on the site.
+1.  Install `prettier` as a development dependency.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+        yarn add prettier -D
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.  Install [prettier-vscode](https://github.com/prettier/prettier-vscode) from the `vs-code` extension store.
+1.  Create `pretty` script command.
 
-### `npm run eject`
+### Linting
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Add `.eslintrc.js` file to the root of the project.
+1. Create `lint` script command
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Testing
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1.  Add and configure `enzyme` test library. [Guide](https://alligator.io/react/testing-react-redux-with-jest-enzyme/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+        yarn add -D enzyme enzyme-adapter-react-16 enzyme-to-json
+        yarn add -D redux-mock-store
+        yarn add -D babel-jest @babel/core @babel/preset-env @babel/preset-react
+        yarn add -D sinon chai
+        yarn add -D @babel/plugin-proposal-class-properties
 
-## Learn More
+1.  Mock out css styles in jest
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Application layout structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app is laid out with a flexbox in such a way that no empty space will remain at the bottom. The app will completely occuppy the height of the viewport.
 
-### Code Splitting
+```html
+<section id="root">
+  <header>
+    <nav></nav>
+  </header>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+  <main class="container">
+    <section></section>
+  </main>
+</section>
+```
 
-### Analyzing the Bundle Size
+## To Do
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Add `prop-types` validation library and enable in `eslint`.

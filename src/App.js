@@ -1,18 +1,18 @@
-import React from "react";
-import { Provider } from "react-redux";
-import axios from "axios";
-import jwt_decode from "jwt-decode";
-import store from "./redux/store";
-import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
-import Routes from "./config/Routes";
+import React from 'react';
+import { Provider } from 'react-redux';
+import axios from 'axios';
+import jwt_decode from 'jwt-decode';
+import store from './redux/store';
+import { setCurrentUser, logoutUser } from './redux/actions/authActions';
+import Routes from './config/Routes';
 
 if (localStorage.jwt) {
   //set auth token header auth;
   axios.defaults.headers.common[
-    "Authorization"
+    'Authorization'
   ] = store.getState().auth.user.token;
 
-  axios.defaults.headers.common["Authorization"] = localStorage.jwt;
+  axios.defaults.headers.common['Authorization'] = localStorage.jwt;
   //decode token and get user
   const decoded = jwt_decode(localStorage.jwt);
   //set current user
@@ -28,12 +28,12 @@ if (localStorage.jwt) {
   }
 }
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <Routes />
     </Provider>
   );
-}
+};
 
 export default App;
